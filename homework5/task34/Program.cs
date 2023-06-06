@@ -20,7 +20,7 @@ void PrintArray(int[] array)
 }
 
 
-int CheckEven(int[] array)
+int SummEvenNumbers(int[] array)
 {
     int result = 0;
     for (int i = 0; i < array.Length; i++)
@@ -40,7 +40,7 @@ int size = Convert.ToInt32(Console.ReadLine());
 int[] array = new int[size];
 FillArray(array);
 PrintArray(array);
-int count = CheckEven(array);
+int count = SummEvenNumbers(array);
 System.Console.WriteLine($"Количество четных элементов массива равно: {count}");
 
 
