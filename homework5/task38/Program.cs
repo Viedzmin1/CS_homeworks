@@ -1,4 +1,4 @@
-﻿// Задача 38: Задайте массив вещественных случайных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+﻿// // Задача 38: Задайте массив вещественных случайных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 
 
 void FillArray(double[] array)
@@ -46,7 +46,6 @@ double FindMin(double[] array)
    return min;
 }
 
-
 Console.Clear();
 System.Console.WriteLine("Введите размерность массива ");
 int size = Convert.ToInt32(Console.ReadLine());
@@ -60,8 +59,19 @@ System.Console.WriteLine($"Максимальный элемент массив�
 System.Console.WriteLine($"Минимальный элемент массива равен: {min}");
 System.Console.WriteLine($"Разница между максимальным и минимальными элементами массива равна: {diff}");
 
-// double DifferenceMaxMin(double[] array)
+
+
+// void PrintArray(double[] array)
 // {
+//     foreach (var item in array)
+//     {
+//         Console.Write($"{item} ");
+//     }
+//     System.Console.WriteLine();
+// }
+
+// double[] array = {2, 6, 8, 7, 3, 5};
+
 //     double min = array[0];
 //     double max = array[0];
 //     double result = max - min;
@@ -76,5 +86,10 @@ System.Console.WriteLine($"Разница между максимальным и
 //             min = array[i];
 //         }
 //     }
-//     return result;
-//     }
+   
+//    double diff = max - min;
+   
+//    PrintArray(array);
+//    System.Console.WriteLine($"{max}");
+//    System.Console.WriteLine($"{min}");
+//    System.Console.WriteLine($"{diff}");
