@@ -18,24 +18,29 @@ void PrintArray(int[,] array)
         }
 }
 
-int[] CheckNumber(int[,] array, int num)
+int [] FindNumber (int[,] array, int num)
 {
     int iFind = 0;
     int jFind = 0;
-    int indexes = massive[iFind, jFind];
+    
     for (int i = 0; i < array.GetLength(0); i++)
+    {
         for (int j = 0; j < array.GetLength(1); j++)
-        if (num == array[i,j])
         {
-            int iFind = i;
-            int jFind = j;
+            if (array[i, j] == num)
+            {
+                iFind = i;
+                jFind = j;
+                Console.WriteLine($"координаты: {iFind} {jFind}");
+            }
+            else if (array[i, j] != num)
+            {
+                System.Console.WriteLine($"Числа {num} в заданном массиве нет");
+            }
+                                    
         }
-        else
-        System.Console.WriteLine($"Числа {num} нет в массиве"); 
-
-        System.Console.WriteLine($"Координаты числа {num}: {iFind} , {jFind}");
-        return new int[] {iFind, jFind};
-
+    }
+    return new int[] {iFind, jFind};
 }
 
 Console.Clear();
@@ -49,7 +54,7 @@ PrintArray(array);
 System.Console.WriteLine();
 System.Console.WriteLine("Введите число");
 int num = Convert.ToInt32(Console.ReadLine());
-int NumIndexes = CheckNumber(array, num);
-System.Console.WriteLine($"Координаты заданного числа: {NumIndexes}");
+int[] NumIndexes = FindNumber(array, num);
+// System.Console.WriteLine(NumIndexes);
 
 
