@@ -33,10 +33,9 @@ int [] FindNumber (int[,] array, int num)
                 jFind = j;
                 Console.WriteLine($"координаты: {iFind} {jFind}");
             }
-            else if (array[i, j] != num)
-            {
-                System.Console.WriteLine($"Числа {num} в заданном массиве нет");
-            }
+            else 
+            System.Console.WriteLine($"Числа {num} в заданном массиве нет");
+            
                                     
         }
     }
