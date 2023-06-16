@@ -18,21 +18,20 @@ void PrintArray(int[,] array)
         }
 }
 
-int[] SummCols (int[,] array)
-{
-    // int summCols = new int[array.GetLength(0)];
-    int summcols = 0;
+double[] AverageCols (int[,] array)
+{    
+    double averagecols = 0;
     for (int i = 0; i < array.GetLength(0); i++)
         {
         for (int j = 0; j < array.GetLength(1); j++)
         if (j<array.GetLength(1))
         {
-            summcols = summcols+array[i,j];
+            averagecols = (averagecols+array[i,j])/j;
             j++;
-            System.Console.Write($"{summcols}, ");
+            System.Console.Write($"{averagecols}, ");
         }
         }
-     return new int[] {summcols};
+     return new double[] {averagecols};
 }
 
 Console.Clear();
@@ -43,5 +42,5 @@ int cols = Convert.ToInt32(Console.ReadLine());
 int[,] array = new int [rows, cols];
 FillArray(array);
 PrintArray(array);
-int[] summcols = SummCols (array);
+double[] averagecols = AverageCols (array);
 
