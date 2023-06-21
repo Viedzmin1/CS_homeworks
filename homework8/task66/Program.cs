@@ -5,9 +5,10 @@
 
 int Func(int M, int N)
 {
-    if (N == M) return 0;
-    return Func(M, N-1) + N;
+    if (N == M) return M;
+    return N + Func(M, N-1);
 }
+
 
 System.Console.WriteLine("Введите целое число M ");
 int M = Convert.ToInt32(Console.ReadLine());

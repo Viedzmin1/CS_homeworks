@@ -8,7 +8,6 @@ string GetNumbersRec(int num)
     return num + " " + GetNumbersRec(num-1);    
 }
 
-Console.Clear();
 
 System.Console.WriteLine("Введите целое число ");
 int num = Convert.ToInt32(Console.ReadLine());
